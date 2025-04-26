@@ -1,0 +1,21 @@
+[package]
+name = "libp2p-kad-fastboot"
+version = "0.0.1"
+edition = "2024"
+
+[dependencies]
+anyhow = "1.0.97"
+async-trait = "0.1.88"
+clap = { version = "4.5.32", features = ["derive", "env"] }
+futures = "0.3.31"
+futures-timer = "3.0.3"
+hex = "0.4.3"
+libp2p = { version = "0.55", features = ["identify", "ping", "tokio", "macros", "kad", "rsa", "ed25519", "quic", "dns", "memory-connection-limits", "serde"] }
+rand = "0.8.5"
+serde = { version = "1.0.219", features = ["derive"] }
+serde_json = "1.0.140"
+signal-hook = "0.3.17"
+signal-hook-tokio = { version = "0.3.1", features = ["futures-v0_3"] }
+tokio = { version = "1.44.1", features = ["full"] }
+tracing = "0.1.41"
+tracing-subscriber = { version = "0.3.19", features = ["env-filter"] }
