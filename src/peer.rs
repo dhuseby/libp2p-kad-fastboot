@@ -253,7 +253,7 @@ impl Peer {
             let kad = &mut self.swarm.behaviour_mut().kademlia;
             let mut initialized = false;
 
-            if let Some(kademlia_state) = self.kademlia_state.take() {
+            if let Some(kademlia_state) = &self.kademlia_state {
                 // load the kademlia state from disk
                 info!(" Loading kademlia state from disk");
                 kademlia_state.iter().for_each(|(peerid, addrs)| {
