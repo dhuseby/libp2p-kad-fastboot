@@ -36,7 +36,7 @@ where
         if let Some(message) = visitor.message {
             if message.starts_with(']') {
                 let message = message.trim_start_matches(']').trim();
-                eprintln!("{message}");
+                println!("{message}");
             } else if message.starts_with(' ') {
                 let level = *event.metadata().level();
                 let message = message.trim();
